@@ -89,15 +89,29 @@ python main.py
 🔐 Default credentials: admin / admin123 (change after login)
 
 Screenshots
-1. Landing Page	2. Login Page
-https://images/landing.png	https://images/login.png
-3. Dashboard	4. Wi‑Fi & Bluetooth Scanner
-https://images/dashboard.png	https://images/scanner.png
-5. Rogue Device Detector	6. Packet Sniffer
-https://images/rogue_detector.png	https://images/packet_sniffer.png
-7. Attack Detection	8. ML Anomaly Detection
-https://images/attack_detection.png	https://images/ml_anomaly.png
-9. Mitigation Panel	10. Endpoint Detection & Response
-https://images/mitigation.png	https://images/edr.png
+### 1. Landing Page | 2. Login Page
+![Landing](./images/landing.png) | ![Login](./images/login.png)
+
+---
+
+### 3. Dashboard | 4. Wi-Fi & Bluetooth Scanner
+![Dashboard](./images/dashboard.png) | ![Scanner](./images/scanner.png)
+
+---
+
+### 5. Rogue Device Detection | 6. Packet Sniffer
+![Rogue Device](./images/rogue_detector.png) | ![Packet Sniffer](./images/packet_sniffer.png)
+
+---
+
+### 7. Attack Detection | 8. ML Anomaly Detection
+![Attack Detection](./images/attack_detection.png) | ![ML Anomaly](./images/ml_anomaly.png)
+
+---
+
+### 9. Mitigation Panel | 10. Endpoint Detection & Response
+![Mitigation](./images/mitigation.png) | ![EDR](./images/edr.png)
+
+
 License
 MIT License © 2025 Nouman Ali
