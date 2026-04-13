@@ -16,17 +16,18 @@
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> •
-  <a href="#key-features">Features</a> •
-  <a href="#architecture">Architecture</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#screenshots">Screenshots</a>
+  <a href="#-overview">Overview</a> •
+  <a href="#-key-features">Features</a> •
+  <a href="#-architecture">Architecture</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-attack-simulation-policy">Policy</a> •
+  <a href="#-roadmap">Roadmap</a>
 </p>
 
 ---
 
-## Overview
+## 📌 Overview
 
 **BWF Toolkit** is a modular cybersecurity platform for real‑time wireless monitoring, threat detection, and forensic analysis of **Wi‑Fi** and **Bluetooth** environments.
 
@@ -34,50 +35,27 @@ It bridges **offensive simulation** (lab only) with **defensive detection** to i
 
 ---
 
-## Key Features
+## 🎯 Key Features
 
-- 📡 **Real‑time scanning** – Wi‑Fi (Scapy/PyShark) + Bluetooth (Bleak)
-- 🚨 **Rogue AP & MAC spoofing detection** – Rule‑based + behavioural analysis
-- 📊 **Live packet capture & protocol analysis** – Inspect 802.11, BLE, and higher layers
-- 🤖 **ML‑based anomaly detection** – Scikit‑learn models for traffic outliers
-- 📑 **Forensic logging & reporting** – PDF reports (ReportLab) + structured logs
-- 🛡️ **Alerting & simulated response** – WebSocket alerts, automated actions (lab)
-- 🔍 **Endpoint Detection & Response (EDR)** – Monitor wireless endpoints, auto‑respond
-
----
-
-## Architecture
-Wireless Devices (Wi-Fi / Bluetooth)
-↓
-Scanner Module (Scapy + PyShark + Bleak)
-↓
-Detection Engine (Rule Engine + ML Model)
-↓
-FastAPI Backend (WebSockets + REST API)
-↓
-Dashboard UI + Alerts / Reports / Response
-
-text
-
-*(A Mermaid diagram is not used due to GitHub rendering limitations; the simple text diagram above works reliably.)*
+| Feature | Description |
+|---------|-------------|
+| 📡 **Real‑time scanning** | Wi‑Fi (Scapy/PyShark) + Bluetooth (Bleak) |
+| 🚨 **Rogue AP & MAC spoofing detection** | Rule‑based + behavioural analysis |
+| 📊 **Live packet capture & protocol analysis** | Inspect 802.11, BLE, and higher layers |
+| 🤖 **ML‑based anomaly detection** | Scikit‑learn models for traffic outliers |
+| 📑 **Forensic logging & reporting** | PDF reports (ReportLab) + structured logs |
+| 🛡️ **Alerting & simulated response** | WebSocket alerts, automated actions (lab) |
 
 ---
 
-## Tech Stack
+## 🏗️ Architecture
 
-| Layer | Technology |
-|-------|-------------|
-| **Backend** | FastAPI |
-| **Networking** | Scapy, PyShark |
-| **Bluetooth** | Bleak |
-| **Machine Learning** | Scikit‑learn |
-| **Communication** | WebSockets |
-| **Reporting** | ReportLab |
-| **Frontend** | HTML, CSS, JavaScript |
-
----
-
-## Quick Start
+flowchart TD
+    A[Wireless Devices<br/>Wi-Fi / Bluetooth] --> B[Scanner Module<br/>Scapy + PyShark + Bleak]
+    B --> C[Detection Engine<br/>Rule Engine + ML Model]
+    C --> D[FastAPI Backend<br/>WebSockets + REST API]
+    D --> E[Dashboard UI<br/>HTML/CSS/JS]
+    D --> F[Alerts / Reports / Response]
 Screenshots
 ### 1. Landing Page | 2. Login Page
 ![Landing](./images/landing.png) | ![Login](./images/login.png)
