@@ -50,12 +50,15 @@ It bridges **offensive simulation** (lab only) with **defensive detection** to i
 
 ## 🏗️ Architecture
 
+```mermaid
+
 flowchart TD
     A[Wireless Devices<br/>Wi-Fi / Bluetooth] --> B[Scanner Module<br/>Scapy + PyShark + Bleak]
     B --> C[Detection Engine<br/>Rule Engine + ML Model]
     C --> D[FastAPI Backend<br/>WebSockets + REST API]
     D --> E[Dashboard UI<br/>HTML/CSS/JS]
     D --> F[Alerts / Reports / Response]
+```
 Screenshots
 ### 1. Landing Page | 2. Login Page
 ![Landing](./images/landing.png) | ![Login](./images/login.png)
