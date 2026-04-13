@@ -1,0 +1,37 @@
+{
+  "controller_url": "ws://localhost:8001/ws",
+  "auth_token": "secure_token_change_me_12345",
+  "reconnect_interval": 30,
+  "command_timeout": 60,
+  "log_level": "INFO",
+  "allowed_actions": [
+    "network_scan",
+    "process_list",
+    "service_control",
+    "firewall_rule",
+    "bluetooth_control",
+    "wifi_control",
+    "system_info",
+    "file_scan",
+    "registry_check",
+    "log_collect",
+    "emergency_shutdown",
+    "network_isolation",
+    "process_terminate",
+    "file_quarantine",
+    "block_mac",
+    "unblock_mac",
+    "shutdown_agent"
+  ],
+  "security": {
+    "enable_encryption": true,
+    "verify_signatures": true,
+    "max_command_size": 1048576,
+    "heartbeat_interval": 30
+  },
+  "logging": {
+    "log_file": "agent.log",
+    "max_log_size": 10485760,
+    "backup_count": 5
+  }
+}

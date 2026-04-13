@@ -1,0 +1,431 @@
+# Module 4: Attack Detection Rules Configuration
+# Real-time threat detection rules for Wi-Fi and Bluetooth attacks
+
+# Deauthentication Flood Detection
+deauth_flood:
+  type: deauth_flood
+  description: "Detects deauthentication flood attacks (Wi-Fi DoS)"
+  severity: high
+  threshold: 5
+  window_seconds: 60
+  enabled: true
+
+# Evil Twin Detection
+evil_twin:
+  type: evil_twin
+  description: "Detects evil twin access points (multiple APs with same SSID)"
+  severity: high
+  threshold: 2
+  window_seconds: 300
+  enabled: true
+
+# High Packets Per Second
+high_pps:
+  type: high_pps
+  description: "Detects high packet rate (potential flooding attack)"
+  severity: medium
+  threshold: 100
+  window_seconds: 60
+  enabled: true
+
+# MAC Address Churn
+mac_churn:
+  type: mac_churn
+  description: "Detects rapid MAC address changes (MAC randomization abuse)"
+  severity: medium
+  threshold: 10
+  window_seconds: 300
+  enabled: true
+
+# Bluetooth Pairing Flood
+bt_pairing_flood:
+  type: bt_pairing_flood
+  description: "Detects Bluetooth pairing flood attacks"
+  severity: medium
+  threshold: 20
+  window_seconds: 60
+  enabled: true
+
+# Packet Size Anomaly
+size_anomaly:
+  type: size_anomaly
+  description: "Detects abnormal packet sizes (potential malformed packets)"
+  severity: low
+  threshold: 10
+  window_seconds: 120
+  enabled: true
+
+# Network Scanning Detection
+network_scanning:
+  type: network_scanning
+  description: "Detects aggressive network scanning behavior"
+  severity: medium
+  threshold: 5
+  window_seconds: 180
+  enabled: true
+
+# Wi-Fi Beacon Flood
+beacon_flood:
+  type: beacon_flood
+  description: "Detects beacon frame flooding attacks"
+  severity: medium
+  threshold: 50
+  window_seconds: 60
+  enabled: true
+
+# Bluetooth HCI Flood
+bt_hci_flood:
+  type: bt_hci_flood
+  description: "Detects Bluetooth HCI command flooding"
+  severity: high
+  threshold: 30
+  window_seconds: 60
+  enabled: true
+
+# Channel Hopping Detection
+channel_hopping:
+  type: channel_hopping
+  description: "Detects rapid channel switching (potential jamming)"
+  severity: high
+  threshold: 20
+  window_seconds: 120
+  enabled: true
+
+# Rogue Access Point
+rogue_ap:
+  type: rogue_ap
+  description: "Detects unauthorized access points"
+  severity: high
+  threshold: 1
+  window_seconds: 600
+  enabled: true
+
+# Device Impersonation
+device_impersonation:
+  type: device_impersonation
+  description: "Detects device impersonation attempts"
+  severity: high
+  threshold: 3
+  window_seconds: 300
+  enabled: true
+
+# Data Exfiltration
+data_exfiltration:
+  type: data_exfiltration
+  description: "Detects potential data exfiltration patterns"
+  severity: high
+  threshold: 1000
+  window_seconds: 3600
+  enabled: true
+
+# Man-in-the-Middle (Wi-Fi)
+wifi_mitm:
+  type: wifi_mitm
+  description: "Detects Wi-Fi man-in-the-middle attack patterns"
+  severity: critical
+  threshold: 5
+  window_seconds: 300
+  enabled: true
+
+# BlueBorne Attack
+blueborne:
+  type: blueborne
+  description: "Detects BlueBorne attack patterns"
+  severity: critical
+  threshold: 10
+  window_seconds: 180
+  enabled: true
+
+# Krack Attack
+krack_attack:
+  type: krack_attack
+  description: "Detects KRACK (Key Reinstallation Attack) patterns"
+  severity: critical
+  threshold: 3
+  window_seconds: 120
+  enabled: true
+
+# DragonBlood Attack
+dragonblood:
+  type: dragonblood
+  description: "Detects DragonBlood WPA3 attack patterns"
+  severity: critical
+  threshold: 5
+  window_seconds: 180
+  enabled: true
+
+# Bluetooth Sniffing
+bt_sniffing:
+  type: bt_sniffing
+  description: "Detects Bluetooth passive sniffing behavior"
+  severity: medium
+  threshold: 100
+  window_seconds: 600
+  enabled: true
+
+# Wi-Fi Pineapple Detection
+wifi_pineapple:
+  type: wifi_pineapple
+  description: "Detects Wi-Fi Pineapple attack patterns"
+  severity: high
+  threshold: 2
+  window_seconds: 300
+  enabled: true
+
+# IoT Device Exploitation
+iot_exploitation:
+  type: iot_exploitation
+  description: "Detects IoT device exploitation attempts"
+  severity: high
+  threshold: 10
+  window_seconds: 180
+  enabled: true
+
+# ===== ADVANCED WIFI ATTACK DETECTION RULES (12 NEW RULES) =====
+
+# 1. Deauthentication/Disassociation Flood (Enhanced)
+deauth_disassoc_flood:
+  type: deauth_disassoc_flood
+  description: "Detects Dot11Deauth/Disassoc frame floods from single or few MACs"
+  severity: critical
+  threshold: 10
+  window_seconds: 60
+  per_source_threshold: 5
+  enabled: true
+
+# 2. Beacon Flood (Fake APs)
+beacon_flood_advanced:
+  type: beacon_flood_advanced
+  description: "Detects sudden surge of beacon frames with many unique BSSID/SSID pairs"
+  severity: high
+  threshold: 30
+  unique_pairs_threshold: 20
+  window_seconds: 60
+  enabled: true
+
+# 3. Probe Request Flood / SSID Scanning Flood
+probe_request_flood:
+  type: probe_request_flood
+  description: "Detects single client sending high rate of Dot11ProbeReq frames"
+  severity: medium
+  threshold: 50
+  per_client_threshold: 30
+  window_seconds: 60
+  enabled: true
+
+# 4. Evil Twin / Rogue AP (Enhanced with RSSI)
+evil_twin_rssi:
+  type: evil_twin_rssi
+  description: "Detects same SSID from unexpected BSSID with unusual channel or high RSSI"
+  severity: critical
+  threshold: 1
+  rssi_difference_threshold: 20
+  window_seconds: 300
+  enabled: true
+
+# 5. MAC Spoofing / Rapid MAC Churn (Enhanced)
+mac_spoofing_advanced:
+  type: mac_spoofing_advanced
+  description: "Detects same logical device with frequently changing MACs (IP/hostname based)"
+  severity: high
+  threshold: 5
+  mapping_changes_threshold: 3
+  window_seconds: 300
+  enabled: true
+
+# 6. RTS/CTS Flood (Control-frame DoS)
+rts_cts_flood:
+  type: rts_cts_flood
+  description: "Detects large number of RTS/CTS control frames from single source"
+  severity: medium
+  threshold: 100
+  per_source_threshold: 50
+  window_seconds: 60
+  enabled: true
+
+# 7. DHCP Starvation Attack
+dhcp_starvation:
+  type: dhcp_starvation
+  description: "Detects many DHCP DISCOVER/REQUEST from unique client MACs exhausting leases"
+  severity: high
+  threshold: 20
+  unique_clients_threshold: 15
+  window_seconds: 120
+  enabled: true
+
+# 8. ARP Spoof / ARP Poisoning
+arp_poisoning:
+  type: arp_poisoning
+  description: "Detects unsolicited ARP replies or conflicting IP→MAC mappings"
+  severity: critical
+  threshold: 5
+  gratuitous_arp_threshold: 3
+  window_seconds: 180
+  enabled: true
+
+# 9. Karma / SSID Spoofing Attack
+karma_attack:
+  type: karma_attack
+  description: "Detects single BSSID responding to probes for many different SSIDs"
+  severity: high
+  threshold: 10
+  unique_ssids_per_bssid_threshold: 5
+  window_seconds: 120
+  enabled: true
+
+# 10. Handshake Harvesting (WPA/WPA2)
+handshake_harvesting:
+  type: handshake_harvesting
+  description: "Detects targeted deauths followed by EAPOL frame capture attempts"
+  severity: critical
+  threshold: 3
+  deauth_eapol_correlation_window: 30
+  window_seconds: 300
+  enabled: true
+
+# 11. Client Misassociation / Association Request Flood
+assoc_request_flood:
+  type: assoc_request_flood
+  description: "Detects many Association/Reassociation requests from one or many clients"
+  severity: medium
+  threshold: 50
+  per_client_threshold: 20
+  per_ap_threshold: 40
+  window_seconds: 60
+  enabled: true
+
+# 12. Channel/Noise Jamming (PHY Layer Attack)
+channel_jamming:
+  type: channel_jamming
+  description: "Detects high noise, malformed frames, or sudden drop in legitimate traffic"
+  severity: critical
+  threshold: 100
+  malformed_frame_threshold: 50
+  phy_error_rate_multiplier: 3.0
+  window_seconds: 120
+  enabled: true
+
+
+
+# 1. Deauthentication/Disassociation Flood (Enhanced)
+deauth_disassoc_flood:
+  type: deauth_disassoc_flood
+  description: "Detects Dot11Deauth/Disassoc frame floods from single or few MACs"
+  severity: critical
+  threshold: 10
+  window_seconds: 60
+  per_source_threshold: 5
+  enabled: true
+
+# 2. Beacon Flood (Fake APs)
+beacon_flood_advanced:
+  type: beacon_flood_advanced
+  description: "Detects sudden surge of beacon frames with many unique BSSID/SSID pairs"
+  severity: high
+  threshold: 30
+  unique_pairs_threshold: 20
+  window_seconds: 60
+  enabled: true
+
+# 3. Probe Request Flood / SSID Scanning Flood
+probe_request_flood:
+  type: probe_request_flood
+  description: "Detects single client sending high rate of Dot11ProbeReq frames"
+  severity: medium
+  threshold: 50
+  per_client_threshold: 30
+  window_seconds: 60
+  enabled: true
+
+# 4. Evil Twin / Rogue AP (Enhanced with RSSI)
+evil_twin_rssi:
+  type: evil_twin_rssi
+  description: "Detects same SSID from unexpected BSSID with unusual channel or high RSSI"
+  severity: critical
+  threshold: 1
+  rssi_difference_threshold: 20
+  window_seconds: 300
+  enabled: true
+
+# 5. MAC Spoofing / Rapid MAC Churn (Enhanced)
+mac_spoofing_advanced:
+  type: mac_spoofing_advanced
+  description: "Detects same logical device with frequently changing MACs (IP/hostname based)"
+  severity: high
+  threshold: 5
+  mapping_changes_threshold: 3
+  window_seconds: 300
+  enabled: true
+
+# 6. RTS/CTS Flood (Control-frame DoS)
+rts_cts_flood:
+  type: rts_cts_flood
+  description: "Detects large number of RTS/CTS control frames from single source"
+  severity: medium
+  threshold: 100
+  per_source_threshold: 50
+  window_seconds: 60
+  enabled: true
+
+# 7. DHCP Starvation Attack
+dhcp_starvation:
+  type: dhcp_starvation
+  description: "Detects many DHCP DISCOVER/REQUEST from unique client MACs exhausting leases"
+  severity: high
+  threshold: 20
+  unique_clients_threshold: 15
+  window_seconds: 120
+  enabled: true
+
+# 8. ARP Spoof / ARP Poisoning
+arp_poisoning:
+  type: arp_poisoning
+  description: "Detects unsolicited ARP replies or conflicting IP→MAC mappings"
+  severity: critical
+  threshold: 5
+  gratuitous_arp_threshold: 3
+  window_seconds: 180
+  enabled: true
+
+# 9. Karma / SSID Spoofing Attack
+karma_attack:
+  type: karma_attack
+  description: "Detects single BSSID responding to probes for many different SSIDs"
+  severity: high
+  threshold: 10
+  unique_ssids_per_bssid_threshold: 5
+  window_seconds: 120
+  enabled: true
+
+# 10. Handshake Harvesting (WPA/WPA2)
+handshake_harvesting:
+  type: handshake_harvesting
+  description: "Detects targeted deauths followed by EAPOL frame capture attempts"
+  severity: critical
+  threshold: 3
+  deauth_eapol_correlation_window: 30
+  window_seconds: 300
+  enabled: true
+
+# 11. Client Misassociation / Association Request Flood
+assoc_request_flood:
+  type: assoc_request_flood
+  description: "Detects many Association/Reassociation requests from one or many clients"
+  severity: medium
+  threshold: 50
+  per_client_threshold: 20
+  per_ap_threshold: 40
+  window_seconds: 60
+  enabled: true
+
+# 12. Channel/Noise Jamming (PHY Layer Attack)
+channel_jamming:
+  type: channel_jamming
+  description: "Detects high noise, malformed frames, or sudden drop in legitimate traffic"
+  severity: critical
+  threshold: 100
+  malformed_frame_threshold: 50
+  phy_error_rate_multiplier: 3.0
+  window_seconds: 120
+  enabled: true
+

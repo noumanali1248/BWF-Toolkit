@@ -1,0 +1,40 @@
+{
+  "module3_config": {
+    "bluetooth_monitoring": {
+      "enabled": true,
+      "interfaces": [
+        "bluetooth0",
+        "bluetooth-monitor"
+      ],
+      "capture_method": "tshark",
+      "filters": [
+        "bluetooth"
+      ],
+      "fields": [
+        "frame.time_epoch",
+        "frame.len",
+        "frame.protocols",
+        "bthci_cmd.opcode",
+        "bthci_evt.event_code",
+        "l2cap.cid",
+        "l2cap.len",
+        "btatt.handle",
+        "btatt.opcode"
+      ],
+      "attack_detection": {
+        "l2cap_ping_flood": {
+          "enabled": true,
+          "threshold": 10,
+          "time_window": 10
+        }
+      }
+    },
+    "wifi_monitoring": {
+      "enabled": true,
+      "interfaces": [
+        "wlp61s0"
+      ],
+      "capture_method": "tshark"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+2025-12-06 00:22:08,067 - __main__ - INFO - Database initialized successfully
+2025-12-06 00:22:08,067 - __main__ - INFO - Loaded 0 known devices
+2025-12-06 00:22:08,067 - __main__ - INFO - Rogue Device Detector initialized
+2025-12-06 00:22:08,068 - __main__ - INFO - Starting comprehensive device monitoring
+2025-12-06 00:22:09,805 - numexpr.utils - INFO - NumExpr defaulting to 12 threads.
+2025-12-06 00:22:10,123 - module5.enhanced_module5_anomaly_detector - INFO - ✅ Enhanced Module 5 database initialized
+2025-12-06 00:22:10,123 - module5.enhanced_module5_anomaly_detector - INFO - 🔍 Enhanced Module 5 Anomaly Detector initialized
+2025-12-06 00:22:10,156 - module8.module8_controller - INFO - ✅ Virtual agent manager loaded successfully
+2025-12-06 00:22:10,165 - module8.enhanced_module8_controller - INFO - Enhanced Module 8 database initialized
+2025-12-06 00:22:10,165 - module8.enhanced_module8_controller - INFO - Enhanced Module 8 storage initialized
+2025-12-06 00:22:10,172 - __main__ - WARNING - Direct access failed: Directory 'static' does not exist
+2025-12-06 00:22:10,174 - __main__ - ERROR - Error getting Module 1 data: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/scan/results (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0974fc0830>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-12-06 00:22:10,174 - __main__ - WARNING - No data received from Module 1

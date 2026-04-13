@@ -1,0 +1,167 @@
+════════════════════════════════════════════════════════════════════════════════
+WIRESHARK COMMANDS - QUICK REFERENCE
+════════════════════════════════════════════════════════════════════════════════
+
+📍 Wireshark Location: /usr/bin/wireshark
+📦 Version: Wireshark 4.2.2
+
+════════════════════════════════════════════════════════════════════════════════
+🚀 COMMANDS TO OPEN WIRESHARK:
+════════════════════════════════════════════════════════════════════════════════
+
+1. SIMPLE - Open Wireshark GUI:
+────────────────────────────────────────────────────────────────────────────────
+sudo wireshark
+
+
+2. AUTO-START CAPTURE - Opens Wireshark and starts capturing immediately:
+────────────────────────────────────────────────────────────────────────────────
+sudo wireshark -i enp0s31f6 -k
+
+
+3. BACKGROUND - Run in background (terminal stays free):
+────────────────────────────────────────────────────────────────────────────────
+sudo wireshark -i enp0s31f6 -k &
+
+
+════════════════════════════════════════════════════════════════════════════════
+📋 HOW TO USE:
+════════════════════════════════════════════════════════════════════════════════
+
+1. Copy one of the commands above
+2. Paste in your terminal
+3. Type your password when prompted
+4. Wireshark GUI window will open
+5. If you used option 1:
+   - Double-click on "enp0s31f6" interface
+   - Or select it and click "Start" button
+6. Packets will appear in real-time!
+7. Click red square button to stop capture
+
+
+════════════════════════════════════════════════════════════════════════════════
+🎯 WIRESHARK FILTERS (Type in filter bar):
+════════════════════════════════════════════════════════════════════════════════
+
+http                    Show only HTTP traffic
+dns                     Show only DNS queries
+tcp                     Show only TCP packets
+udp                     Show only UDP packets
+icmp                    Show only ICMP (ping) packets
+arp                     Show only ARP packets
+
+ip.addr==8.8.8.8        Show packets to/from 8.8.8.8
+ip.src==192.168.1.100   Show packets FROM this IP
+ip.dst==192.168.1.1     Show packets TO this IP
+
+tcp.port==443           Show HTTPS traffic
+tcp.port==80            Show HTTP traffic
+tcp.port==22            Show SSH traffic
+
+dns.qry.name contains "google"    Show DNS queries containing "google"
+http.request.uri        Show HTTP requests
+
+frame.len > 1000        Show packets larger than 1000 bytes
+
+
+════════════════════════════════════════════════════════════════════════════════
+💡 USEFUL WIRESHARK FEATURES:
+════════════════════════════════════════════════════════════════════════════════
+
+MENU: Statistics → Protocol Hierarchy
+  → Shows breakdown of all protocols captured
+
+MENU: Statistics → Conversations
+  → Shows all IP conversations (who talked to who)
+
+MENU: Statistics → IO Graph
+  → Visual graph of packet rates over time
+
+MENU: Statistics → Endpoints
+  → List of all IP addresses seen
+
+MENU: File → Save As
+  → Save capture as .pcap file for later analysis
+
+RIGHT-CLICK on any packet → Follow → TCP Stream
+  → See entire conversation between two hosts
+
+
+════════════════════════════════════════════════════════════════════════════════
+🔥 GENERATE TRAFFIC FOR TESTING:
+════════════════════════════════════════════════════════════════════════════════
+
+Open another terminal while Wireshark is capturing and run:
+
+ping google.com -c 20
+ping 8.8.8.8 -c 10
+curl https://www.google.com
+curl https://www.github.com
+dig google.com @8.8.8.8
+nslookup google.com
+
+Or just browse websites in your browser!
+
+
+════════════════════════════════════════════════════════════════════════════════
+💾 SAVE YOUR CAPTURE:
+════════════════════════════════════════════════════════════════════════════════
+
+1. In Wireshark: File → Save As
+2. Choose location (recommend: ~/Downloads/)
+3. Give it a name: my_capture.pcap
+4. Click Save
+
+You can open this file later: wireshark my_capture.pcap
+
+
+════════════════════════════════════════════════════════════════════════════════
+🎨 WIRESHARK INTERFACE EXPLAINED:
+════════════════════════════════════════════════════════════════════════════════
+
+TOP SECTION (Packet List):
+  → List of all captured packets
+  → Each row is one packet
+  → Click any packet to see details
+
+MIDDLE SECTION (Packet Details):
+  → Detailed breakdown of selected packet
+  → Expandable tree view
+  → Shows all protocol layers
+
+BOTTOM SECTION (Packet Bytes):
+  → Raw hex dump of packet
+  → Shows actual bytes sent on network
+
+
+════════════════════════════════════════════════════════════════════════════════
+🎯 RECOMMENDED WORKFLOW:
+════════════════════════════════════════════════════════════════════════════════
+
+1. Start Wireshark: sudo wireshark -i enp0s31f6 -k
+
+2. Generate some traffic (browse web, ping, etc.)
+
+3. Let it capture for 30-60 seconds
+
+4. Stop capture (red square button)
+
+5. Explore the data:
+   - Look at Protocol Hierarchy (Statistics menu)
+   - Check Conversations (Statistics menu)
+   - Apply filters to focus on specific traffic
+   - Follow TCP streams of interesting packets
+
+6. Save capture: File → Save As → my_capture.pcap
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+🚀 READY TO START?
+
+Run this command now:  sudo wireshark -i enp0s31f6 -k
+
+This will open Wireshark and start capturing immediately!
+
+════════════════════════════════════════════════════════════════════════════════
+

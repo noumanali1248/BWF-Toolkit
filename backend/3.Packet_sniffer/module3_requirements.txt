@@ -1,0 +1,23 @@
+# Module 3 Real Packet Capture Requirements
+# Install these packages for real packet capture functionality
+
+# Core packet capture libraries
+scapy>=2.5.0
+pyshark>=0.6
+
+# System monitoring
+psutil>=5.9.0
+netifaces>=0.11.0
+
+# Additional network utilities
+netaddr>=0.8.0
+dpkt>=1.9.8
+
+# For Windows compatibility (if needed)
+# pywin32>=305
+
+# For Bluetooth packet capture (optional)
+# pybluez>=0.23
+
+# For advanced packet analysis
+# impacket>=0.10.0

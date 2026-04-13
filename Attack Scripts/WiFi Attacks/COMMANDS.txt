@@ -1,0 +1,87 @@
+================================================================================
+🌐 WIFI/NETWORK ATTACK TESTING COMMANDS
+================================================================================
+
+📱 Dashboard: http://localhost:8000/module4
+
+================================================================================
+🌊 ATTACK 1: HTTP DoS FLOOD (200 requests)
+================================================================================
+
+bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/WiFi Attacks/attack1_dos.sh"
+
+================================================================================
+🔍 ATTACK 2: PORT SCAN (19 ports)
+================================================================================
+
+bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/WiFi Attacks/attack2_portscan.sh"
+
+================================================================================
+🚀 ATTACK 3: PACKET FLOOD (15 seconds)
+================================================================================
+
+bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/WiFi Attacks/attack3_packet_flood.sh"
+
+================================================================================
+⚡ RUN ALL 3 WIFI ATTACKS (Total: ~45 seconds)
+================================================================================
+
+bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/WiFi Attacks/run_all_wifi_attacks.sh"
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+🌐 WIFI/NETWORK ATTACK TESTING COMMANDS
+================================================================================
+
+📱 Dashboard: http://localhost:8000/module4
+
+================================================================================
+🌊 ATTACK 1: HTTP DoS FLOOD (200 requests)
+================================================================================
+
+bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/WiFi Attacks/attack1_dos.sh"
+
+================================================================================
+🔍 ATTACK 2: PORT SCAN (19 ports)
+================================================================================
+
+bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/WiFi Attacks/attack2_portscan.sh"
+
+================================================================================
+🚀 ATTACK 3: PACKET FLOOD (15 seconds)
+================================================================================
+
+bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/WiFi Attacks/attack3_packet_flood.sh"
+
+================================================================================
+⚡ RUN ALL 3 WIFI ATTACKS (Total: ~45 seconds)
+================================================================================
+
+bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/WiFi Attacks/run_all_wifi_attacks.sh"
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,168 @@
+================================================================================
+🌐 WIFI ATTACK SUITE - MODULE 4 TESTING
+================================================================================
+Target: localhost:8000
+Total Duration: ~45 seconds
+Attacks: 3 types (DoS, Port Scan, Packet Flood)
+
+Dashboard: http://localhost:8000/module4
+================================================================================
+
+================================================================================
+🌊 ATTACK 1/3: HTTP DoS FLOOD
+================================================================================
+Method: Rapid HTTP requests
+Requests: 200
+Target: API endpoint
+================================================================================
+
+  → Sent: 50 requests
+  → Sent: 100 requests
+  → Sent: 150 requests
+  → Sent: 200 requests
+
+✅ DoS attack completed! (200 requests)
+
+================================================================================
+🔍 ATTACK 2/3: PORT SCAN
+================================================================================
+Method: TCP port scanning
+Ports: Common service ports (22, 80, 443, etc.)
+Target: localhost
+================================================================================
+
+  [*] Scanning port 20... ❌ CLOSED
+  [*] Scanning port 21... ❌ CLOSED
+  [*] Scanning port 22... ❌ CLOSED
+  [*] Scanning port 23... ❌ CLOSED
+  [*] Scanning port 25... ❌ CLOSED
+  [*] Scanning port 53... ❌ CLOSED
+  [*] Scanning port 80... ❌ CLOSED
+  [*] Scanning port 110... ❌ CLOSED
+  [*] Scanning port 143... ❌ CLOSED
+  [*] Scanning port 443... ❌ CLOSED
+  [*] Scanning port 445... ❌ CLOSED
+  [*] Scanning port 3306... ❌ CLOSED
+  [*] Scanning port 3389... ❌ CLOSED
+  [*] Scanning port 5432... ❌ CLOSED
+  [*] Scanning port 5900... ❌ CLOSED
+  [*] Scanning port 8000... ❌ CLOSED
+  [*] Scanning port 8080... ❌ CLOSED
+  [*] Scanning port 8443... ❌ CLOSED
+
+✅ Port scan completed! (18 ports)
+
+================================================================================
+🚀 ATTACK 3/3: PACKET FLOOD
+================================================================================
+Method: High-rate packet transmission
+Duration: 15 seconds
+Rate: ~100 packets/second
+================================================================================
+
+  [⚡] Attack in progress... 15s remaining | Packets: 10    [⚡] Attack in progress... 15s remaining | Packets: 20    [⚡] Attack in progress... 15s remaining | Packets: 30    [⚡] Attack in progress... 15s remaining | Packets: 40    [⚡] Attack in progress... 15s remaining | Packets: 50    [⚡] Attack in progress... 14s remaining | Packets: 60    [⚡] Attack in progress... 14s remaining | Packets: 70    [⚡] Attack in progress... 14s remaining | Packets: 80    [⚡] Attack in progress... 14s remaining | Packets: 90    [⚡] Attack in progress... 14s remaining | Packets: 100    [⚡] Attack in progress... 14s remaining | Packets: 110    [⚡] Attack in progress... 14s remaining | Packets: 120    [⚡] Attack in progress... 14s remaining | Packets: 130    [⚡] Attack in progress... 13s remaining | Packets: 140    [⚡] Attack in progress... 13s remaining | Packets: 150    [⚡] Attack in progress... 13s remaining | Packets: 160    [⚡] Attack in progress... 13s remaining | Packets: 170    [⚡] Attack in progress... 13s remaining | Packets: 180    [⚡] Attack in progress... 13s remaining | Packets: 190    [⚡] Attack in progress... 13s remaining | Packets: 200    [⚡] Attack in progress... 13s remaining | Packets: 210    [⚡] Attack in progress... 13s remaining | Packets: 220    [⚡] Attack in progress... 12s remaining | Packets: 230    [⚡] Attack in progress... 12s remaining | Packets: 240    [⚡] Attack in progress... 12s remaining | Packets: 250    [⚡] Attack in progress... 12s remaining | Packets: 260    [⚡] Attack in progress... 12s remaining | Packets: 270    [⚡] Attack in progress... 12s remaining | Packets: 280    [⚡] Attack in progress... 12s remaining | Packets: 290    [⚡] Attack in progress... 12s remaining | Packets: 300    [⚡] Attack in progress... 11s remaining | Packets: 310    [⚡] Attack in progress... 11s remaining | Packets: 320    [⚡] Attack in progress... 11s remaining | Packets: 330    [⚡] Attack in progress... 11s remaining | Packets: 340    [⚡] Attack in progress... 11s remaining | Packets: 350    [⚡] Attack in progress... 11s remaining | Packets: 360    [⚡] Attack in progress... 11s remaining | Packets: 370    [⚡] Attack in progress... 11s remaining | Packets: 380    [⚡] Attack in progress... 10s remaining | Packets: 390    [⚡] Attack in progress... 10s remaining | Packets: 400    [⚡] Attack in progress... 10s remaining | Packets: 410    [⚡] Attack in progress... 10s remaining | Packets: 420    [⚡] Attack in progress... 10s remaining | Packets: 430    [⚡] Attack in progress... 10s remaining | Packets: 440    [⚡] Attack in progress... 10s remaining | Packets: 450    [⚡] Attack in progress... 10s remaining | Packets: 460    [⚡] Attack in progress... 9s remaining | Packets: 470    [⚡] Attack in progress... 9s remaining | Packets: 480    [⚡] Attack in progress... 9s remaining | Packets: 490    [⚡] Attack in progress... 9s remaining | Packets: 500    [⚡] Attack in progress... 9s remaining | Packets: 510    [⚡] Attack in progress... 9s remaining | Packets: 520    [⚡] Attack in progress... 9s remaining | Packets: 530    [⚡] Attack in progress... 9s remaining | Packets: 540    [⚡] Attack in progress... 8s remaining | Packets: 550    [⚡] Attack in progress... 8s remaining | Packets: 560    [⚡] Attack in progress... 8s remaining | Packets: 570    [⚡] Attack in progress... 8s remaining | Packets: 580    [⚡] Attack in progress... 8s remaining | Packets: 590    [⚡] Attack in progress... 8s remaining | Packets: 600    [⚡] Attack in progress... 8s remaining | Packets: 610    [⚡] Attack in progress... 8s remaining | Packets: 620    [⚡] Attack in progress... 7s remaining | Packets: 630    [⚡] Attack in progress... 7s remaining | Packets: 640    [⚡] Attack in progress... 7s remaining | Packets: 650    [⚡] Attack in progress... 7s remaining | Packets: 660    [⚡] Attack in progress... 7s remaining | Packets: 670    [⚡] Attack in progress... 7s remaining | Packets: 680    [⚡] Attack in progress... 7s remaining | Packets: 690    [⚡] Attack in progress... 7s remaining | Packets: 700    [⚡] Attack in progress... 7s remaining | Packets: 710    [⚡] Attack in progress... 6s remaining | Packets: 720    [⚡] Attack in progress... 6s remaining | Packets: 730    [⚡] Attack in progress... 6s remaining | Packets: 740    [⚡] Attack in progress... 6s remaining | Packets: 750    [⚡] Attack in progress... 6s remaining | Packets: 760    [⚡] Attack in progress... 6s remaining | Packets: 770    [⚡] Attack in progress... 6s remaining | Packets: 780    [⚡] Attack in progress... 6s remaining | Packets: 790    [⚡] Attack in progress... 5s remaining | Packets: 800    [⚡] Attack in progress... 5s remaining | Packets: 810    [⚡] Attack in progress... 5s remaining | Packets: 820    [⚡] Attack in progress... 5s remaining | Packets: 830    [⚡] Attack in progress... 5s remaining | Packets: 840    [⚡] Attack in progress... 5s remaining | Packets: 850    [⚡] Attack in progress... 5s remaining | Packets: 860    [⚡] Attack in progress... 5s remaining | Packets: 870    [⚡] Attack in progress... 5s remaining | Packets: 880    [⚡] Attack in progress... 4s remaining | Packets: 890    [⚡] Attack in progress... 4s remaining | Packets: 900    [⚡] Attack in progress... 4s remaining | Packets: 910    [⚡] Attack in progress... 4s remaining | Packets: 920    [⚡] Attack in progress... 4s remaining | Packets: 930    [⚡] Attack in progress... 4s remaining | Packets: 940    [⚡] Attack in progress... 4s remaining | Packets: 950    [⚡] Attack in progress... 3s remaining | Packets: 960    [⚡] Attack in progress... 3s remaining | Packets: 970    [⚡] Attack in progress... 3s remaining | Packets: 980    [⚡] Attack in progress... 3s remaining | Packets: 990    [⚡] Attack in progress... 3s remaining | Packets: 1000    [⚡] Attack in progress... 3s remaining | Packets: 1010    [⚡] Attack in progress... 3s remaining | Packets: 1020    [⚡] Attack in progress... 3s remaining | Packets: 1030    [⚡] Attack in progress... 3s remaining | Packets: 1040    [⚡] Attack in progress... 2s remaining | Packets: 1050    [⚡] Attack in progress... 2s remaining | Packets: 1060    [⚡] Attack in progress... 2s remaining | Packets: 1070    [⚡] Attack in progress... 2s remaining | Packets: 1080    [⚡] Attack in progress... 2s remaining | Packets: 1090    [⚡] Attack in progress... 2s remaining | Packets: 1100    [⚡] Attack in progress... 2s remaining | Packets: 1110    [⚡] Attack in progress... 2s remaining | Packets: 1120    [⚡] Attack in progress... 1s remaining | Packets: 1130    [⚡] Attack in progress... 1s remaining | Packets: 1140    [⚡] Attack in progress... 1s remaining | Packets: 1150    [⚡] Attack in progress... 1s remaining | Packets: 1160    [⚡] Attack in progress... 1s remaining | Packets: 1170    [⚡] Attack in progress... 1s remaining | Packets: 1180    [⚡] Attack in progress... 1s remaining | Packets: 1190    [⚡] Attack in progress... 1s remaining | Packets: 1200  
+
+✅ Packet flood completed! (1200 packets)
+
+================================================================================
+✅ ALL WIFI ATTACKS COMPLETED!
+================================================================================
+
+📊 Attack Summary:
+  🌊 HTTP DoS Flood   : 200 requests - COMPLETED
+  🔍 Port Scan        : 18 ports - COMPLETED
+  🚀 Packet Flood     : 1200 packets - COMPLETED
+
+📱 View Results:
+  Dashboard: http://localhost:8000/module4
+
+🔍 Verify Detection:
+  - Check Module 4 for DoS, Port Scan, and Packet Flood alerts
+  - Attacks should appear for 20 seconds
+  - Then move to attack history
+
+================================================================================
+================================================================================
+🌐 WIFI ATTACK SUITE - MODULE 4 TESTING
+================================================================================
+Target: localhost:8000
+Total Duration: ~45 seconds
+Attacks: 3 types (DoS, Port Scan, Packet Flood)
+
+Dashboard: http://localhost:8000/module4
+================================================================================
+
+================================================================================
+🌊 ATTACK 1/3: HTTP DoS FLOOD
+================================================================================
+Method: Rapid HTTP requests
+Requests: 200
+Target: API endpoint
+================================================================================
+
+  → Sent: 50 requests
+  → Sent: 100 requests
+  → Sent: 150 requests
+  → Sent: 200 requests
+
+✅ DoS attack completed! (200 requests)
+
+================================================================================
+🔍 ATTACK 2/3: PORT SCAN
+================================================================================
+Method: TCP port scanning
+Ports: Common service ports (22, 80, 443, etc.)
+Target: localhost
+================================================================================
+
+  [*] Scanning port 20... ❌ CLOSED
+  [*] Scanning port 21... ❌ CLOSED
+  [*] Scanning port 22... ❌ CLOSED
+  [*] Scanning port 23... ❌ CLOSED
+  [*] Scanning port 25... ❌ CLOSED
+  [*] Scanning port 53... ❌ CLOSED
+  [*] Scanning port 80... ❌ CLOSED
+  [*] Scanning port 110... ❌ CLOSED
+  [*] Scanning port 143... ❌ CLOSED
+  [*] Scanning port 443... ❌ CLOSED
+  [*] Scanning port 445... ❌ CLOSED
+  [*] Scanning port 3306... ❌ CLOSED
+  [*] Scanning port 3389... ❌ CLOSED
+  [*] Scanning port 5432... ❌ CLOSED
+  [*] Scanning port 5900... ❌ CLOSED
+  [*] Scanning port 8000... ❌ CLOSED
+  [*] Scanning port 8080... ❌ CLOSED
+  [*] Scanning port 8443... ❌ CLOSED
+
+✅ Port scan completed! (18 ports)
+
+================================================================================
+🚀 ATTACK 3/3: PACKET FLOOD
+================================================================================
+Method: High-rate packet transmission
+Duration: 15 seconds
+Rate: ~100 packets/second
+================================================================================
+
+  [⚡] Attack in progress... 15s remaining | Packets: 10    [⚡] Attack in progress... 15s remaining | Packets: 20    [⚡] Attack in progress... 15s remaining | Packets: 30    [⚡] Attack in progress... 14s remaining | Packets: 40    [⚡] Attack in progress... 14s remaining | Packets: 50    [⚡] Attack in progress... 14s remaining | Packets: 60    [⚡] Attack in progress... 14s remaining | Packets: 70    [⚡] Attack in progress... 14s remaining | Packets: 80    [⚡] Attack in progress... 14s remaining | Packets: 90    [⚡] Attack in progress... 14s remaining | Packets: 100    [⚡] Attack in progress... 14s remaining | Packets: 110    [⚡] Attack in progress... 13s remaining | Packets: 120    [⚡] Attack in progress... 13s remaining | Packets: 130    [⚡] Attack in progress... 13s remaining | Packets: 140    [⚡] Attack in progress... 13s remaining | Packets: 150    [⚡] Attack in progress... 13s remaining | Packets: 160    [⚡] Attack in progress... 13s remaining | Packets: 170    [⚡] Attack in progress... 13s remaining | Packets: 180    [⚡] Attack in progress... 13s remaining | Packets: 190    [⚡] Attack in progress... 12s remaining | Packets: 200    [⚡] Attack in progress... 12s remaining | Packets: 210    [⚡] Attack in progress... 12s remaining | Packets: 220    [⚡] Attack in progress... 12s remaining | Packets: 230    [⚡] Attack in progress... 12s remaining | Packets: 240    [⚡] Attack in progress... 12s remaining | Packets: 250    [⚡] Attack in progress... 12s remaining | Packets: 260    [⚡] Attack in progress... 12s remaining | Packets: 270    [⚡] Attack in progress... 11s remaining | Packets: 280    [⚡] Attack in progress... 11s remaining | Packets: 290    [⚡] Attack in progress... 11s remaining | Packets: 300    [⚡] Attack in progress... 11s remaining | Packets: 310    [⚡] Attack in progress... 11s remaining | Packets: 320    [⚡] Attack in progress... 11s remaining | Packets: 330    [⚡] Attack in progress... 11s remaining | Packets: 340    [⚡] Attack in progress... 11s remaining | Packets: 350    [⚡] Attack in progress... 10s remaining | Packets: 360    [⚡] Attack in progress... 10s remaining | Packets: 370    [⚡] Attack in progress... 10s remaining | Packets: 380    [⚡] Attack in progress... 10s remaining | Packets: 390    [⚡] Attack in progress... 10s remaining | Packets: 400    [⚡] Attack in progress... 10s remaining | Packets: 410    [⚡] Attack in progress... 10s remaining | Packets: 420    [⚡] Attack in progress... 9s remaining | Packets: 430    [⚡] Attack in progress... 9s remaining | Packets: 440    [⚡] Attack in progress... 9s remaining | Packets: 450    [⚡] Attack in progress... 9s remaining | Packets: 460    [⚡] Attack in progress... 9s remaining | Packets: 470    [⚡] Attack in progress... 9s remaining | Packets: 480    [⚡] Attack in progress... 9s remaining | Packets: 490    [⚡] Attack in progress... 9s remaining | Packets: 500    [⚡] Attack in progress... 8s remaining | Packets: 510    [⚡] Attack in progress... 8s remaining | Packets: 520    [⚡] Attack in progress... 8s remaining | Packets: 530    [⚡] Attack in progress... 8s remaining | Packets: 540    [⚡] Attack in progress... 8s remaining | Packets: 550    [⚡] Attack in progress... 8s remaining | Packets: 560    [⚡] Attack in progress... 8s remaining | Packets: 570    [⚡] Attack in progress... 8s remaining | Packets: 580    [⚡] Attack in progress... 7s remaining | Packets: 590    [⚡] Attack in progress... 7s remaining | Packets: 600    [⚡] Attack in progress... 7s remaining | Packets: 610    [⚡] Attack in progress... 7s remaining | Packets: 620    [⚡] Attack in progress... 7s remaining | Packets: 630    [⚡] Attack in progress... 7s remaining | Packets: 640    [⚡] Attack in progress... 7s remaining | Packets: 650    [⚡] Attack in progress... 7s remaining | Packets: 660    [⚡] Attack in progress... 6s remaining | Packets: 670    [⚡] Attack in progress... 6s remaining | Packets: 680    [⚡] Attack in progress... 6s remaining | Packets: 690    [⚡] Attack in progress... 6s remaining | Packets: 700    [⚡] Attack in progress... 6s remaining | Packets: 710    [⚡] Attack in progress... 6s remaining | Packets: 720    [⚡] Attack in progress... 6s remaining | Packets: 730    [⚡] Attack in progress... 6s remaining | Packets: 740    [⚡] Attack in progress... 5s remaining | Packets: 750    [⚡] Attack in progress... 5s remaining | Packets: 760    [⚡] Attack in progress... 5s remaining | Packets: 770    [⚡] Attack in progress... 5s remaining | Packets: 780    [⚡] Attack in progress... 5s remaining | Packets: 790    [⚡] Attack in progress... 5s remaining | Packets: 800    [⚡] Attack in progress... 5s remaining | Packets: 810    [⚡] Attack in progress... 5s remaining | Packets: 820    [⚡] Attack in progress... 4s remaining | Packets: 830    [⚡] Attack in progress... 4s remaining | Packets: 840    [⚡] Attack in progress... 4s remaining | Packets: 850    [⚡] Attack in progress... 4s remaining | Packets: 860    [⚡] Attack in progress... 4s remaining | Packets: 870    [⚡] Attack in progress... 4s remaining | Packets: 880    [⚡] Attack in progress... 4s remaining | Packets: 890    [⚡] Attack in progress... 4s remaining | Packets: 900    [⚡] Attack in progress... 3s remaining | Packets: 910    [⚡] Attack in progress... 3s remaining | Packets: 920    [⚡] Attack in progress... 3s remaining | Packets: 930    [⚡] Attack in progress... 3s remaining | Packets: 940    [⚡] Attack in progress... 3s remaining | Packets: 950    [⚡] Attack in progress... 3s remaining | Packets: 960    [⚡] Attack in progress... 3s remaining | Packets: 970    [⚡] Attack in progress... 3s remaining | Packets: 980    [⚡] Attack in progress... 3s remaining | Packets: 990    [⚡] Attack in progress... 2s remaining | Packets: 1000    [⚡] Attack in progress... 2s remaining | Packets: 1010    [⚡] Attack in progress... 2s remaining | Packets: 1020    [⚡] Attack in progress... 2s remaining | Packets: 1030    [⚡] Attack in progress... 2s remaining | Packets: 1040    [⚡] Attack in progress... 2s remaining | Packets: 1050    [⚡] Attack in progress... 2s remaining | Packets: 1060    [⚡] Attack in progress... 1s remaining | Packets: 1070    [⚡] Attack in progress... 1s remaining | Packets: 1080    [⚡] Attack in progress... 1s remaining | Packets: 1090    [⚡] Attack in progress... 1s remaining | Packets: 1100    [⚡] Attack in progress... 1s remaining | Packets: 1110    [⚡] Attack in progress... 1s remaining | Packets: 1120    [⚡] Attack in progress... 1s remaining | Packets: 1130    [⚡] Attack in progress... 1s remaining | Packets: 1140  
+
+✅ Packet flood completed! (1140 packets)
+
+================================================================================
+✅ ALL WIFI ATTACKS COMPLETED!
+================================================================================
+
+📊 Attack Summary:
+  🌊 HTTP DoS Flood   : 200 requests - COMPLETED
+  🔍 Port Scan        : 18 ports - COMPLETED
+  🚀 Packet Flood     : 1140 packets - COMPLETED
+
+📱 View Results:
+  Dashboard: http://localhost:8000/module4
+
+🔍 Verify Detection:
+  - Check Module 4 for DoS, Port Scan, and Packet Flood alerts
+  - Attacks should appear for 20 seconds
+  - Then move to attack history
+
+================================================================================

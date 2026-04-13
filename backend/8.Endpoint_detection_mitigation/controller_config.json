@@ -1,0 +1,51 @@
+{
+  "host": "0.0.0.0",
+  "port": 8001,
+  "auth_token": "secure_token_change_me_12345",
+  "ssl_cert": null,
+  "ssl_key": null,
+  "database_path": "controller.db",
+  "log_retention_days": 30,
+  "command_timeout": 300,
+  "max_agents": 1000,
+  "allowed_actions": [
+    "network_scan",
+    "process_list",
+    "service_control",
+    "firewall_rule",
+    "bluetooth_control",
+    "wifi_control",
+    "system_info",
+    "file_scan",
+    "registry_check",
+    "log_collect",
+    "emergency_shutdown",
+    "network_isolation",
+    "process_terminate",
+    "file_quarantine",
+    "block_mac",
+    "unblock_mac",
+    "scan_bluetooth",
+    "scan_wifi",
+    "collect_syslogs",
+    "get_baselines",
+    "create_baseline",
+    "shutdown_agent"
+  ],
+  "security": {
+    "enable_encryption": false,
+    "require_signatures": true,
+    "max_message_size": 1048576,
+    "session_timeout": 3600
+  },
+  "logging": {
+    "log_file": "controller.log",
+    "max_log_size": 10485760,
+    "backup_count": 5
+  },
+  "cleanup": {
+    "enabled": true,
+    "interval_hours": 24,
+    "retention_days": 30
+  }
+}

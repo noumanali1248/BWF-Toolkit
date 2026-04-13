@@ -1,0 +1,87 @@
+================================================================================
+🎯 BLUETOOTH ATTACK TESTING COMMANDS
+================================================================================
+
+📱 Dashboard: http://localhost:8000/module4
+
+================================================================================
+🔴 ATTACK 1: L2PING FLOOD (15 seconds)
+================================================================================
+
+sudo bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks/attack1_l2ping.sh"
+
+================================================================================
+🟠 ATTACK 2: RFCOMM FLOOD (20 seconds)
+================================================================================
+
+sudo bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks/attack2_rfcomm.sh"
+
+================================================================================
+🟡 ATTACK 3: SDP FLOOD (20 seconds)
+================================================================================
+
+sudo bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks/attack3_sdp.sh"
+
+================================================================================
+⚡ RUN ALL 3 ATTACKS (Total: ~60 seconds)
+================================================================================
+
+sudo bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks/run_all_attacks.sh"
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+🎯 BLUETOOTH ATTACK TESTING COMMANDS
+================================================================================
+
+📱 Dashboard: http://localhost:8000/module4
+
+================================================================================
+🔴 ATTACK 1: L2PING FLOOD (15 seconds)
+================================================================================
+
+sudo bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks/attack1_l2ping.sh"
+
+================================================================================
+🟠 ATTACK 2: RFCOMM FLOOD (20 seconds)
+================================================================================
+
+sudo bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks/attack2_rfcomm.sh"
+
+================================================================================
+🟡 ATTACK 3: SDP FLOOD (20 seconds)
+================================================================================
+
+sudo bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks/attack3_sdp.sh"
+
+================================================================================
+⚡ RUN ALL 3 ATTACKS (Total: ~60 seconds)
+================================================================================
+
+sudo bash "/home/floki/Downloads/OWN R/Complete Project (2)/Complete Project/Attack Scripts and Commands/Bluetooth Attacks/run_all_attacks.sh"
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
