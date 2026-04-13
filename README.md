@@ -78,16 +78,6 @@ text
 ---
 
 ## Quick Start
-
-```bash
-git clone https://github.com/noumanali1248/BWF-Toolkit.git
-cd BWF-Toolkit
-pip install -r setup/requirements.txt
-cd backend
-python main.py
-🌐 Access: http://localhost:8000
-🔐 Default credentials: admin / admin123 (change after login)
-
 Screenshots
 ### 1. Landing Page | 2. Login Page
 ![Landing](./images/landing.png) | ![Login](./images/login.png)
@@ -112,6 +102,14 @@ Screenshots
 ### 9. Mitigation Panel | 10. Endpoint Detection & Response
 ![Mitigation](./images/mitigation.png) | ![EDR](./images/edr.png)
 
+```bash
+git clone https://github.com/noumanali1248/BWF-Toolkit.git
+cd BWF-Toolkit
+pip install -r setup/requirements.txt
+cd backend
+python main.py
+🌐 Access: http://localhost:8000
+🔐 Default credentials: admin / admin123 (change after login)
 
 License
 MIT License © 2025 Nouman Ali
