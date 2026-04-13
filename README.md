@@ -1,4 +1,3 @@
-
 <!-- README.md for BWF Toolkit – Wireless Forensics & Threat Detection Platform -->
 
 <p align="center">
@@ -19,11 +18,11 @@
 <p align="center">
   <a href="#-overview">Overview</a> •
   <a href="#-key-features">Features</a> •
+  <a href="#-screenshots">Screenshots</a> •
   <a href="#-architecture">Architecture</a> •
   <a href="#-tech-stack">Tech Stack</a> •
   <a href="#-quick-start">Quick Start</a> •
-  <a href="#-attack-simulation-policy">Policy</a> •
-  <a href="#-roadmap">Roadmap</a>
+  <a href="#-attack-simulation-policy">Policy</a>
 </p>
 
 ---
@@ -46,6 +45,31 @@ It bridges **offensive simulation** (lab only) with **defensive detection** to i
 | 🤖 **ML‑based anomaly detection** | Scikit‑learn models for traffic outliers |
 | 📑 **Forensic logging & reporting** | PDF reports (ReportLab) + structured logs |
 | 🛡️ **Alerting & simulated response** | WebSocket alerts, automated actions (lab) |
+| 🔍 **Endpoint Detection & Response (EDR)** | Monitor wireless endpoints, auto‑respond |
+
+---
+
+## 📸 Screenshots
+
+> 🖼️ *Replace the placeholder image paths with your actual screenshots (e.g., `images/landing.png`).*
+
+| Module | Preview |
+|--------|---------|
+| 1. Landing Page | `![Landing Page](images/landing.png)` |
+| 2. Login Page | `![Login Page](images/login.png)` |
+| 3. Dashboard | `![Dashboard](images/dashboard.png)` |
+| 4. Wi‑Fi & Bluetooth Scanner | `![WiFi-Bluetooth Scanner](images/scanner.png)` |
+| 5. Rogue Device Detector | `![Rogue Device Detector](images/rogue_detector.png)` |
+| 6. Packet Sniffer | `![Packet Sniffer](images/packet_sniffer.png)` |
+| 7. Attack Detection | `![Attack Detection](images/attack_detection.png)` |
+| 8. ML‑based Anomaly Detection | `![ML Anomaly Detection](images/ml_anomaly.png)` |
+| 9. Mitigation Panel | `![Mitigation](images/mitigation.png)` |
+| 10. Endpoint Detection & Response (EDR) | `![EDR](images/edr.png)` |
+
+**How to add screenshots:**
+1. Create an `images/` folder in your repository.
+2. Upload your screenshots (PNG/JPG) to that folder.
+3. The placeholders above will automatically display the images.
 
 ---
 
