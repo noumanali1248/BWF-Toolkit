@@ -47,30 +47,39 @@ It bridges **offensive simulation** (lab only) with **defensive detection** to i
 ---
 
 ## Architecture
+Wireless Devices (Wi-Fi / Bluetooth)
+↓
+Scanner Module (Scapy + PyShark + Bleak)
+↓
+Detection Engine (Rule Engine + ML Model)
+↓
+FastAPI Backend (WebSockets + REST API)
+↓
+Dashboard UI + Alerts / Reports / Response
 
-```mermaid
-flowchart TD
-    A["Wireless Devices (Wi-Fi / Bluetooth)"]
-    B["Scanner Module (Scapy + PyShark + Bleak)"]
-    C["Detection Engine (Rule Engine + ML Model)"]
-    D["FastAPI Backend (WebSockets + REST API)"]
-    E["Dashboard UI"]
-    F["Alerts / Reports / Response"]
+text
 
-    A --> B --> C --> D
-    D --> E
-    D --> F
-Tech Stack
-Layer	Technology
-Backend	FastAPI
-Networking	Scapy, PyShark
-Bluetooth	Bleak
-Machine Learning	Scikit‑learn
-Communication	WebSockets
-Reporting	ReportLab
-Frontend	HTML, CSS, JavaScript
-Quick Start
-bash
+*(A Mermaid diagram is not used due to GitHub rendering limitations; the simple text diagram above works reliably.)*
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-------------|
+| **Backend** | FastAPI |
+| **Networking** | Scapy, PyShark |
+| **Bluetooth** | Bleak |
+| **Machine Learning** | Scikit‑learn |
+| **Communication** | WebSockets |
+| **Reporting** | ReportLab |
+| **Frontend** | HTML, CSS, JavaScript |
+
+---
+
+## Quick Start
+
+```bash
 git clone https://github.com/noumanali1248/BWF-Toolkit.git
 cd BWF-Toolkit
 pip install -r setup/requirements.txt
@@ -92,5 +101,3 @@ https://images/attack_detection.png	https://images/ml_anomaly.png
 https://images/mitigation.png	https://images/edr.png
 License
 MIT License © 2025 Nouman Ali
-
-<p align="center"> Made with ❤️ for wireless security research. </p>
