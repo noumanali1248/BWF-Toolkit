@@ -69,24 +69,21 @@ Username: admin
 Password: admin123
 
 ⚠️ Change credentials after first login.
-
 ⚠️ CRITICAL: Attack Scripts Usage Policy
-🔴 Purpose of Attack Scripts
 
+🔴 Purpose of Attack Scripts
 The Attack Scripts directory contains simulated attack scenarios for:
 
 Bluetooth attacks (L2Ping, RFCOMM, SDP testing)
 Wi-Fi attacks (ARP spoofing, DoS, packet flooding)
 
 👉 These are included to:
-
 Test detection capabilities
 Simulate real-world threats
 Validate security monitoring modules
 🚫 STRICT USAGE RESTRICTIONS
 
 These scripts MUST NOT be used:
-
 ❌ On public or private networks without permission
 ❌ For unauthorized penetration testing
 ❌ For disrupting real systems
