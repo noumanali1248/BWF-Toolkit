@@ -51,16 +51,6 @@ Machine Learning: Scikit-learn
 Communication: WebSockets
 Reporting: ReportLab
 Frontend: HTML, CSS, JavaScript
-📂 Project Structure
-BWF-Toolkit/
-├── backend/                    # Core application & modules
-├── Attack Scripts/             # Lab-based attack simulations
-│   ├── Bluetooth Attacks/
-│   └── WiFi Attacks/
-├── templates/                  # UI templates
-├── static/                     # CSS/JS assets
-├── setup/                      # Installation scripts
-└── README.md
 🚀 Installation & Setup
 git clone https://github.com/noumanali1248/BWF-Toolkit.git
 cd BWF-Toolkit
