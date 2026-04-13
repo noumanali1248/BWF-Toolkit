@@ -16,17 +16,17 @@
 </p>
 
 <p align="center">
-  <a href="#-overview">Overview</a> •
-  <a href="#-key-features">Features</a> •
-  <a href="#-architecture">Architecture</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-screenshots">Screenshots</a>
+  <a href="#overview">Overview</a> •
+  <a href="#key-features">Features</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#screenshots">Screenshots</a>
 </p>
 
 ---
 
-## 📌 Overview
+## Overview
 
 **BWF Toolkit** is a modular cybersecurity platform for real‑time wireless monitoring, threat detection, and forensic analysis of **Wi‑Fi** and **Bluetooth** environments.
 
@@ -34,7 +34,7 @@ It bridges **offensive simulation** (lab only) with **defensive detection** to i
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
 - 📡 **Real‑time scanning** – Wi‑Fi (Scapy/PyShark) + Bluetooth (Bleak)
 - 🚨 **Rogue AP & MAC spoofing detection** – Rule‑based + behavioural analysis
@@ -46,16 +46,21 @@ It bridges **offensive simulation** (lab only) with **defensive detection** to i
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 flowchart TD
-    A[Wireless Devices<br/>Wi-Fi / Bluetooth] --> B[Scanner Module<br/>Scapy + PyShark + Bleak]
-    B --> C[Detection Engine<br/>Rule Engine + ML Model]
-    C --> D[FastAPI Backend<br/>WebSockets + REST API]
-    D --> E[Dashboard UI<br/>HTML/CSS/JS]
-    D --> F[Alerts / Reports / Response]
-⚙️ Tech Stack
+    A["Wireless Devices (Wi-Fi / Bluetooth)"]
+    B["Scanner Module (Scapy + PyShark + Bleak)"]
+    C["Detection Engine (Rule Engine + ML Model)"]
+    D["FastAPI Backend (WebSockets + REST API)"]
+    E["Dashboard UI"]
+    F["Alerts / Reports / Response"]
+
+    A --> B --> C --> D
+    D --> E
+    D --> F
+Tech Stack
 Layer	Technology
 Backend	FastAPI
 Networking	Scapy, PyShark
@@ -64,7 +69,7 @@ Machine Learning	Scikit‑learn
 Communication	WebSockets
 Reporting	ReportLab
 Frontend	HTML, CSS, JavaScript
-🚀 Quick Start
+Quick Start
 bash
 git clone https://github.com/noumanali1248/BWF-Toolkit.git
 cd BWF-Toolkit
@@ -74,7 +79,7 @@ python main.py
 🌐 Access: http://localhost:8000
 🔐 Default credentials: admin / admin123 (change after login)
 
-📸 Screenshots
+Screenshots
 1. Landing Page	2. Login Page
 https://images/landing.png	https://images/login.png
 3. Dashboard	4. Wi‑Fi & Bluetooth Scanner
@@ -85,5 +90,7 @@ https://images/rogue_detector.png	https://images/packet_sniffer.png
 https://images/attack_detection.png	https://images/ml_anomaly.png
 9. Mitigation Panel	10. Endpoint Detection & Response
 https://images/mitigation.png	https://images/edr.png
-📜 License
+License
 MIT License © 2025 Nouman Ali
+
+<p align="center"> Made with ❤️ for wireless security research. </p>
